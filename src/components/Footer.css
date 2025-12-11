@@ -1,0 +1,442 @@
+/* ========================================
+   FOOTER.CSS - DISEÑO EXACTO SEGÚN IMÁGENES
+   ======================================== */
+
+.main-footer {
+    background-color: #1a1a1a;
+    color: #b0b0b0;
+    padding: 0;
+    margin-top: 80px;
+    font-size: 0.9em;
+}
+
+/* ========================================
+   NEWSLETTER - Parte superior del footer
+   ======================================== */
+.footer-newsletter {
+    background: linear-gradient(135deg, #d76d6d 0%, #c96565 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 20px;
+    flex-wrap: wrap;
+}
+
+.footer-newsletter p {
+    margin: 0;
+    font-weight: 600;
+    color: white;
+    font-size: 1.05em;
+}
+
+.footer-newsletter input {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 6px;
+    width: 260px;
+    background-color: white;
+    color: #333;
+    font-size: 0.95em;
+    transition: box-shadow 0.3s ease;
+}
+
+.footer-newsletter input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.footer-newsletter button {
+    background-color: #8b4c4c;
+    color: white;
+    padding: 11px 32px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-newsletter button:hover {
+    background-color: #6d3939;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   REDES SOCIALES - Barra negra con título "Seguimos"
+   ======================================== */
+.footer-social {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 28px 20px;
+    border-bottom: 1px solid #222;
+}
+
+.footer-social p {
+    font-weight: 600;
+    margin-bottom: 22px;
+    font-size: 1.05em;
+    color: white;
+    text-transform: none;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.social-icons a,
+.social-icons i {
+    font-size: 1.6em;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover,
+.social-icons i:hover {
+    color: var(--color-primary);
+    transform: scale(1.2);
+}
+
+/* ========================================
+   GRID DE LINKS - 4 Columnas con Iconos Circulares
+   ======================================== */
+.footer-links-grid {
+    max-width: var(--max-width-desktop);
+    margin: 0 auto;
+    padding: 45px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    background-color: #0a0a0a;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.footer-icon-wrapper {
+    width: 52px;
+    height: 52px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-section:hover .footer-icon-wrapper {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: rotate(360deg);
+}
+
+.footer-icon-wrapper i {
+    color: white;
+    font-size: 1.5em;
+}
+
+.footer-section h4 {
+    color: white;
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    color: #999;
+    padding-left: 0;
+}
+
+.footer-section li i {
+    font-size: 0.85em;
+    color: #666;
+    width: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-section li:hover {
+    color: white;
+    padding-left: 8px;
+}
+
+.footer-section li:hover i {
+    color: var(--color-primary);
+}
+
+/* ========================================
+   FOOTER BOTTOM - Info de contacto con LOGO CIRCULAR
+   ======================================== */
+.footer-bottom {
+    max-width: var(--max-width-desktop);
+    margin: 0 auto;
+    padding: 35px 20px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.contact-footer-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo-circle {
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.footer-company-name {
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: #b0b0b0;
+}
+
+.footer-contact-details p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    font-size: 0.9em;
+    padding-left: 0;
+}
+
+.footer-contact-details p:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-contact-details i {
+    color: var(--color-primary);
+    font-size: 1.2em;
+    width: 22px;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+@media (max-width: 900px) {
+    .footer-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+        padding: 40px 20px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MÓVIL
+   ======================================== */
+@media (max-width: 768px) {
+    .main-footer {
+        margin-top: 60px;
+        font-size: 0.85em;
+    }
+
+    .footer-newsletter {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 15px;
+    }
+
+    .footer-newsletter input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer-newsletter button {
+        padding: 11px 40px;
+    }
+
+    .footer-social {
+        padding: 24px 15px;
+    }
+
+    .social-icons {
+        gap: 20px;
+    }
+
+    .social-icons a,
+    .social-icons i {
+        font-size: 1.4em;
+    }
+
+    .footer-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 25px;
+        padding: 35px 15px;
+    }
+
+    .footer-section-header {
+        gap: 14px;
+    }
+
+    .footer-icon-wrapper {
+        width: 48px;
+        height: 48px;
+    }
+
+    .footer-icon-wrapper i {
+        font-size: 1.35em;
+    }
+
+    .footer-section h4 {
+        font-size: 1.05em;
+    }
+
+    .footer-section li {
+        font-size: 0.85em;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 15px;
+        gap: 22px;
+    }
+
+    .contact-footer-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .footer-logo-circle {
+        width: 75px;
+        height: 75px;
+    }
+
+    .footer-contact-details {
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer-contact-details p {
+        font-size: 0.85em;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-newsletter input {
+        max-width: 260px;
+    }
+
+    .footer-links-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 32px 15px;
+    }
+
+    .footer-section h4 {
+        font-size: 1em;
+    }
+
+    .footer-section li {
+        font-size: 0.8em;
+    }
+
+    .footer-logo-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .footer-contact-details p {
+        font-size: 0.8em;
+    }
+
+    .social-icons a,
+    .social-icons i {
+        font-size: 1.3em;
+    }
+}
+
+/* ========================================
+   TEMA OSCURO
+   ======================================== */
+body.dark-theme .footer-newsletter input {
+    background-color: #222;
+    color: #ddd;
+}
+
+body.dark-theme .footer-section li {
+    color: #888;
+}
+
+body.dark-theme .footer-section li:hover {
+    color: #ddd;
+}
+
+body.dark-theme .footer-contact-details {
+    color: #888;
+}
+
+body.dark-theme .footer-contact-details p:hover {
+    color: #ddd;
+}

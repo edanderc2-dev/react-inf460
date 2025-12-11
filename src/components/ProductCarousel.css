@@ -1,0 +1,158 @@
+/* ========================================
+   PRODUCT CAROUSEL CSS - MEJORADO PARA MÓVIL
+   ======================================== */
+
+.product-carousel-section {
+    margin: 40px 0;
+}
+
+/* Título de sección con fondo coral */
+.section-title-bar {
+    background: linear-gradient(135deg, #d76d6d 0%, #c96565 100%);
+    color: white;
+    padding: 14px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    border-radius: 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.product-carousel-container {
+    position: relative;
+    padding: 0 60px;
+    margin: 0 15px;
+}
+
+.product-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.product-carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-carousel-item {
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+/* Botones de navegación del carrusel */
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, rgba(215, 109, 109, 0.9) 0%, rgba(201, 101, 101, 0.9) 100%);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.3em;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-nav-btn:hover {
+    background: linear-gradient(135deg, rgba(201, 101, 101, 1) 0%, rgba(184, 90, 90, 1) 100%);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav-btn.prev {
+    left: 10px;
+}
+
+.carousel-nav-btn.next {
+    right: 10px;
+}
+
+/* RESPONSIVE - Tablet */
+@media (max-width: 1024px) {
+    .product-carousel-container {
+        padding: 0 50px;
+    }
+
+    .carousel-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+}
+
+/* RESPONSIVE - Móvil */
+@media (max-width: 768px) {
+    .product-carousel-section {
+        margin: 25px 0;
+    }
+
+    .section-title-bar {
+        font-size: 1em;
+        padding: 12px 15px;
+        margin-bottom: 20px;
+        letter-spacing: 0.8px;
+    }
+
+    .product-carousel-container {
+        padding: 0 50px;
+        margin: 0 10px;
+    }
+
+    .product-carousel-item {
+        padding: 0 8px;
+    }
+
+    .carousel-nav-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1.15em;
+    }
+
+    .carousel-nav-btn.prev {
+        left: 5px;
+    }
+
+    .carousel-nav-btn.next {
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-bar {
+        font-size: 0.9em;
+        padding: 10px 12px;
+        margin-bottom: 18px;
+    }
+
+    .product-carousel-container {
+        padding: 0 45px;
+        margin: 0 8px;
+    }
+
+    .product-carousel-item {
+        padding: 0 6px;
+    }
+
+    .carousel-nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.05em;
+    }
+
+    .carousel-nav-btn.prev {
+        left: 3px;
+    }
+
+    .carousel-nav-btn.next {
+        right: 3px;
+    }
+}

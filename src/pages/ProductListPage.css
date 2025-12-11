@@ -1,0 +1,319 @@
+/* ========================================
+   PRODUCTLISTPAGE.CSS - DISEÑO EXACTO
+   ======================================== */
+
+.product-list-page {
+    padding: 0 15px;
+    max-width: var(--max-width-desktop);
+    margin: 0 auto;
+}
+
+/* Breadcrumb más prominente */
+.breadcrumb {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    color: #555;
+    font-weight: 400;
+}
+
+.breadcrumb a {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--color-primary);
+}
+
+.breadcrumb span {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Layout con sidebar */
+.content-layout {
+    display: flex;
+    gap: 25px;
+}
+
+/* ========================================
+   SIDEBAR DE FILTROS (Izquierda)
+   ======================================== */
+.sidebar-filters {
+    width: 220px;
+    flex-shrink: 0;
+    background-color: white;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    height: fit-content;
+}
+
+.sidebar-filters h3 {
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.filter-block {
+    margin-bottom: 15px;
+}
+
+.filter-block h4 {
+    font-size: 0.95em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.sidebar-filters ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-filters li {
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: #666;
+    font-size: 0.88em;
+    transition: color 0.3s ease;
+    padding-left: 0;
+}
+
+.sidebar-filters li:hover {
+    color: var(--color-primary);
+}
+
+.most-sold-items {
+    padding-left: 12px;
+    margin-top: 8px;
+    border-left: 2px solid var(--border-color);
+}
+
+.most-sold-items p {
+    margin: 6px 0;
+    font-size: 0.82em;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.most-sold-items p:hover {
+    color: var(--color-primary);
+}
+
+/* ========================================
+   ÁREA PRINCIPAL DE PRODUCTOS
+   ======================================== */
+.product-listing-main {
+    flex-grow: 1;
+}
+
+.product-listing-main h2 {
+    color: var(--color-primary);
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* ========================================
+   BARRA DE ORDENAMIENTO
+   ======================================== */
+.sort-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    background-color: #f5f5f5;
+    border-radius: 0;
+    box-shadow: none;
+    flex-wrap: wrap;
+    border: 1px solid #e0e0e0;
+}
+
+.sort-bar span {
+    font-weight: 400;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.sort-bar label {
+    font-weight: 400;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.sort-bar select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: white;
+    color: var(--text-color);
+    font-size: 0.88em;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.sort-bar select:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.sort-bar button, .view-toggle-btn {
+    padding: 6px 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: white;
+    color: var(--text-color);
+    font-size: 0.88em;
+    cursor: pointer;
+    margin-left: auto;
+    transition: all 0.3s ease;
+    font-weight: 400;
+}
+
+.sort-bar button:hover, .view-toggle-btn:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+/* ========================================
+   GRID DE PRODUCTOS
+   ======================================== */
+/* Reutiliza las clases de ProductCard.css y variables.css */
+
+/* ========================================
+   RESPONSIVE - TABLETS
+   ======================================== */
+@media (max-width: 1024px) {
+    .sidebar-filters {
+        width: 220px;
+        padding: 18px;
+    }
+
+    .content-layout {
+        gap: 20px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MÓVIL
+   ======================================== */
+@media (max-width: 768px) {
+    .product-list-page {
+        padding: 0 10px;
+    }
+
+    .breadcrumb {
+        font-size: 0.85em;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    .content-layout {
+        flex-direction: column;
+    }
+
+    .sidebar-filters {
+        width: 100%;
+        order: 2;
+        margin-top: 20px;
+    }
+
+    .product-listing-main {
+        order: 1;
+    }
+
+    .product-listing-main h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .sort-bar {
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 15px;
+    }
+
+    .sort-bar button, .view-toggle-btn {
+        margin-left: 0;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MUY PEQUEÑO
+   ======================================== */
+@media (max-width: 480px) {
+    .breadcrumb {
+        font-size: 0.8em;
+    }
+
+    .product-listing-main h2 {
+        font-size: 1.3em;
+    }
+
+    .sidebar-filters {
+        padding: 15px;
+    }
+
+    .sidebar-filters h3 {
+        font-size: 1.1em;
+    }
+
+    .sort-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .sort-bar span, .sort-bar label {
+        font-size: 0.85em;
+    }
+
+    .sort-bar select, .sort-bar button {
+        width: 100%;
+        font-size: 0.85em;
+    }
+}
+
+/* ========================================
+   TEMA OSCURO
+   ======================================== */
+body.dark-theme .sidebar-filters {
+    background-color: var(--bg-header);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .sort-bar {
+    background-color: var(--bg-header);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .sort-bar select,
+body.dark-theme .sort-bar button,
+body.dark-theme .view-toggle-btn {
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .sidebar-filters li {
+    color: #999;
+}
+
+body.dark-theme .sidebar-filters li:hover {
+    color: var(--color-primary);
+}
