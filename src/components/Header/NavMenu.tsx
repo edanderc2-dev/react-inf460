@@ -16,11 +16,11 @@ interface NavMenuProps {
 
 const NavMenu: React.FC<NavMenuProps> = ({ isOpen, closeMenu }) => {
   const { t } = useTranslation();
-  
+
   // Categorías con iconos Font Awesome
   const categoryItems: NavItem[] = [
-    { label: "Cotillón", path: "/cotillon", icon: "fa-solid fa-party-horn" },
-    { label: "Baño", path: "/bano", icon: "fa-solid fa-toilet" },
+    { label: "Costillon", path: "/cotillon", icon: "fa-solid fa-party-horn" },
+    { label: "Baño", path: "/BAÑO", icon: "fa-solid fa-toilet" },
     { label: "Infantes", path: "/infantes", icon: "fa-solid fa-horse-rocking" },
     { label: "Cocina", path: "/cocina", icon: "fa-solid fa-pot-food" },
     { label: "Decoración", path: "/decoracion", icon: "fa-solid fa-couch" },
@@ -50,10 +50,10 @@ const NavMenu: React.FC<NavMenuProps> = ({ isOpen, closeMenu }) => {
               onClick={closeMenu}
             >
               <i className={`menu-icon ${item.icon}`}></i>
-              {item.label}
+              {t(item.label.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""))}
             </Link>
           ))}
-          
+
           {/* Item de Ofertas con estilo especial */}
           <Link 
             to="/ofertas" 

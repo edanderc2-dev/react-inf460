@@ -19,7 +19,6 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products, title }) =>
   const [currentIndex, setCurrentIndex] = useState(0);
   const [quantity, setQuantity] = useState<{[key: number]: number}>({});
 
-  // Número de productos visibles según el ancho de pantalla
   const getVisibleCount = () => {
     if (window.innerWidth <= 480) return 2;
     if (window.innerWidth <= 768) return 2;

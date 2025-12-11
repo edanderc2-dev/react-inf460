@@ -1,7 +1,3 @@
-/* ========================================
-   FOOTER.CSS - DISEÑO EXACTO SEGÚN IMÁGENES
-   ======================================== */
-
 .main-footer {
     background-color: #1a1a1a;
     color: #b0b0b0;
@@ -10,9 +6,6 @@
     font-size: 0.9em;
 }
 
-/* ========================================
-   NEWSLETTER - Parte superior del footer
-   ======================================== */
 .footer-newsletter {
     background: linear-gradient(135deg, #d76d6d 0%, #c96565 100%);
     display: flex;
@@ -66,9 +59,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* ========================================
-   REDES SOCIALES - Barra negra con título "Seguimos"
-   ======================================== */
 .footer-social {
     background-color: #0a0a0a;
     text-align: center;

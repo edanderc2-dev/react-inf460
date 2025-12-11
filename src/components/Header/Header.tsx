@@ -5,21 +5,22 @@ import NavMenu from './NavMenu';
 import ThemeToggle from '../ThemeToggle';
 import './Header.css';
 
+// ✅ Labels como keys de traducción
 const SecondaryNavItems = [
-    { label: "COTILLÃ“N", path: "/cotillon", icon: "fa-solid fa-party-horn" },
-    { label: "BAÃ‘O", path: "/bano", icon: "fa-solid fa-toilet" },
-    { label: "INFANTES", path: "/infantes", icon: "fa-solid fa-horse-rocking" },
-    { label: "COCINA", path: "/cocina", icon: "fa-solid fa-pot-food" },
-    { label: "DECORACIÃ“N", path: "/decoracion", icon: "fa-solid fa-couch" },
-    { label: "DORMITORIO", path: "/dormitorio", icon: "fa-solid fa-bed" },
-    { label: "FERRETERÃA", path: "/ferreteria", icon: "fa-solid fa-wrench" },
-    { label: "ILUMINACIÃ“N", path: "/iluminacion", icon: "fa-solid fa-lightbulb" },
-    { label: "JARDÃN", path: "/jardin", icon: "fa-solid fa-seedling" },
-    { label: "LIVING, COMEDOR", path: "/living", icon: "fa-solid fa-tv" },
-    { label: "MASCOTAS", path: "/mascotas", icon: "fa-solid fa-paw" },
-    { label: "OFICINA Y PAPELERÃA", path: "/oficina", icon: "fa-solid fa-pen" },
-    { label: "INDUMENTARIA", path: "/indumentaria", icon: "fa-solid fa-shirt" },
-    { label: "SALUD Y BELLEZA", path: "/salud", icon: "fa-solid fa-heart-pulse" },
+    { label: "cotillon", path: "/cotillon", icon: "fa-solid fa-party-horn" },
+    { label: "baño", path: "/bano", icon: "fa-solid fa-toilet" },
+    { label: "infantes", path: "/infantes", icon: "fa-solid fa-horse-rocking" },
+    { label: "cocina", path: "/cocina", icon: "fa-solid fa-pot-food" },
+    { label: "decoracion", path: "/decoracion", icon: "fa-solid fa-couch" },
+    { label: "dormitorio", path: "/dormitorio", icon: "fa-solid fa-bed" },
+    { label: "ferreteria", path: "/ferreteria", icon: "fa-solid fa-wrench" },
+    { label: "iluminacion", path: "/iluminacion", icon: "fa-solid fa-lightbulb" },
+    { label: "jardin", path: "/jardin", icon: "fa-solid fa-seedling" },
+    { label: "living", path: "/living", icon: "fa-solid fa-tv" },
+    { label: "mascotas", path: "/mascotas", icon: "fa-solid fa-paw" },
+    { label: "oficina", path: "/oficina", icon: "fa-solid fa-pen" },
+    { label: "indumentaria", path: "/indumentaria", icon: "fa-solid fa-shirt" },
+    { label: "salud", path: "/salud", icon: "fa-solid fa-heart-pulse" },
 ];
 
 const Header: React.FC = () => {
@@ -41,7 +42,7 @@ const Header: React.FC = () => {
                         <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
                         <a href="#" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
                         <a href="#" aria-label="TikTok"><i className="fa-brands fa-tiktok"></i></a>
-                        <a href="#" aria-label="UbicaciÃ³n"><i className="fa-solid fa-location-dot"></i></a>
+                        <a href="#" aria-label="Ubicación"><i className="fa-solid fa-location-dot"></i></a>
                     </div>
                     <ThemeToggle />
                 </div>
@@ -88,7 +89,7 @@ const Header: React.FC = () => {
                         {SecondaryNavItems.map((item) => (
                             <Link key={item.path} to={item.path} className="category-link">
                                 <i className={item.icon}></i>
-                                <span>{item.label}</span>
+                                <span>{t(item.label)}</span> {/* 🔹 Traducción */}
                             </Link>
                         ))}
                     </div>

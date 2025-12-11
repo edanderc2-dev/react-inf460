@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import ProductListPage from './pages/ProductListPage';
 import UserDataDisplayPage from './pages/UserDataDisplayPage';
+
 import './App.css'; // Asegúrate de que este archivo App.css esté vacío o contenga solo estilos muy generales
 
 const App: React.FC = () => {

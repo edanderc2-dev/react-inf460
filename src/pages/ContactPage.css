@@ -1,103 +1,103 @@
-/* ========================================
-   CONTACTPAGE.CSS - DISEÑO EXACTO
-   ======================================== */
-
 .contact-page-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 15px;
+    padding: 30px 20px;
 }
 
 .contact-header {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .contact-header h2 {
-    color: var(--color-primary);
-    font-size: 2em;
-    margin-bottom: 10px;
+    color: var(--text-color);
+    font-size: 2.2em;
+    margin-bottom: 12px;
+    font-weight: bold;
 }
 
 .contact-header p {
     color: var(--text-light);
     font-size: 1em;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .contact-content-grid {
     display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 30px;
+    grid-template-columns: 300px 1fr;
+    gap: 35px;
 }
 
 /* ========================================
-   PANEL DE INFORMACIÓN DE CONTACTO
+   PANEL DE INFORMACIÓN DE CONTACTO - IMAGEN 3
    ======================================== */
 .contact-info-panel {
     background-color: white;
     border: 1px solid var(--border-color);
-    padding: 25px;
-    border-radius: 8px;
+    padding: 30px 25px;
+    border-radius: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     height: fit-content;
 }
 
 .contact-info-panel .company-name {
     font-weight: bold;
-    color: var(--color-primary);
+    color: var(--text-color);
     font-size: 1.1em;
-    border-bottom: 2px solid var(--color-primary);
-    padding-bottom: 12px;
-    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 
 .contact-details p {
     margin: 0;
     display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.95em;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 0.92em;
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .contact-details i {
-    color: var(--color-primary);
-    font-size: 1.2em;
+    color: var(--text-color);
+    font-size: 1.15em;
     width: 20px;
     text-align: center;
+    margin-top: 2px;
+    flex-shrink: 0;
 }
 
 /* ========================================
-   FORMULARIO DE CONTACTO
+   FORMULARIO DE CONTACTO - IMAGEN 3
    ======================================== */
 .contact-form-panel {
     background-color: white;
     border: 1px solid var(--border-color);
-    padding: 30px;
-    border-radius: 8px;
+    padding: 35px 30px;
+    border-radius: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .form-header-title {
-    color: var(--color-primary);
+    color: var(--text-color);
     margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 1.5em;
-    border-bottom: 2px solid var(--color-primary);
-    padding-bottom: 12px;
+    margin-bottom: 30px;
+    font-size: 1.6em;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    font-weight: bold;
 }
 
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 22px;
     margin-bottom: 20px;
 }
 
@@ -107,36 +107,42 @@
 }
 
 .form-group label {
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 8px;
-    font-size: 0.9em;
-    color: var(--text-color);
+    font-size: 0.88em;
+    color: #666;
 }
 
 .form-group input:not([type="checkbox"]), 
 .form-group select, 
 .form-group textarea {
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
+    padding: 11px 15px;
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+    background-color: #fafafa;
     color: var(--text-color);
-    font-size: 0.95em;
+    font-size: 0.92em;
     font-family: inherit;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .form-group input:focus, 
 .form-group select:focus, 
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(215, 109, 109, 0.1);
+    border-color: #999;
+    background-color: white;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
 }
 
 .form-group textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 130px;
 }
 
 /* Área de mensaje ocupa ambas columnas */
@@ -150,9 +156,10 @@
     display: flex;
     align-items: center;
     font-weight: normal;
-    margin-top: 10px;
+    margin-top: 12px;
     cursor: pointer;
-    font-size: 0.95em;
+    font-size: 0.92em;
+    color: var(--text-color);
 }
 
 .checkbox-label input[type="checkbox"] {
@@ -160,36 +167,37 @@
     width: 18px;
     height: 18px;
     cursor: pointer;
-    accent-color: var(--color-primary);
+    accent-color: #0066cc;
 }
 
 /* Footer del formulario */
 .form-footer {
     display: flex;
     justify-content: flex-end;
-    margin-top: 25px;
-    padding-top: 20px;
+    margin-top: 28px;
+    padding-top: 22px;
     border-top: 1px solid var(--border-color);
 }
 
 .submit-button {
-    background-color: var(--color-secondary);
+    background: linear-gradient(135deg, #ff6347 0%, #e5533d 100%);
     color: white;
-    padding: 14px 45px;
+    padding: 13px 50px;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.95em;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 99, 71, 0.3);
 }
 
 .submit-button:hover {
-    background-color: #e5533d;
+    background: linear-gradient(135deg, #e5533d 0%, #cc4a35 100%);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 99, 71, 0.3);
+    box-shadow: 0 4px 14px rgba(255, 99, 71, 0.4);
 }
 
 .submit-button:active {
@@ -200,11 +208,11 @@
 .privacy-note {
     grid-column: span 2;
     text-align: center;
-    font-size: 0.85em;
+    font-size: 0.84em;
     color: #888;
     margin-top: 20px;
-    line-height: 1.6;
-    font-style: italic;
+    line-height: 1.7;
+    font-style: normal;
 }
 
 /* ========================================
@@ -213,15 +221,15 @@
 @media (max-width: 1024px) {
     .contact-content-grid {
         grid-template-columns: 280px 1fr;
-        gap: 25px;
+        gap: 30px;
     }
 
     .contact-info-panel {
-        padding: 20px;
+        padding: 25px 20px;
     }
 
     .contact-form-panel {
-        padding: 25px;
+        padding: 30px 25px;
     }
 }
 
@@ -230,31 +238,31 @@
    ======================================== */
 @media (max-width: 768px) {
     .contact-page-container {
-        padding: 15px 10px;
+        padding: 20px 15px;
     }
 
     .contact-header h2 {
-        font-size: 1.6em;
+        font-size: 1.7em;
     }
 
     .contact-content-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 25px;
     }
 
     .contact-info-panel {
         order: 2;
-        padding: 20px;
+        padding: 25px 20px;
     }
 
     .contact-form-panel {
         order: 1;
-        padding: 20px;
+        padding: 25px 20px;
     }
 
     .form-grid {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 20px;
     }
 
     .message-area {
@@ -276,25 +284,25 @@
 
     .submit-button {
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
     }
 }
 
 @media (max-width: 480px) {
     .contact-header h2 {
-        font-size: 1.4em;
+        font-size: 1.5em;
     }
 
     .contact-info-panel {
-        padding: 18px;
+        padding: 20px 18px;
     }
 
     .contact-form-panel {
-        padding: 18px;
+        padding: 22px 18px;
     }
 
     .form-header-title {
-        font-size: 1.3em;
+        font-size: 1.4em;
     }
 
     .form-group label {
@@ -304,13 +312,13 @@
     .form-group input:not([type="checkbox"]), 
     .form-group select, 
     .form-group textarea {
-        padding: 10px 12px;
+        padding: 10px 13px;
         font-size: 0.9em;
     }
 
     .submit-button {
-        padding: 12px 35px;
-        font-size: 0.95em;
+        padding: 12px 40px;
+        font-size: 0.92em;
     }
 }
 
@@ -334,9 +342,14 @@ body.dark-theme .form-group textarea {
 body.dark-theme .form-group input:focus, 
 body.dark-theme .form-group select:focus, 
 body.dark-theme .form-group textarea:focus {
-    border-color: var(--color-primary);
+    border-color: #666;
+    background-color: #2a2a2a;
 }
 
 body.dark-theme .privacy-note {
     color: #999;
+}
+
+body.dark-theme .contact-details i {
+    color: var(--text-light);
 }

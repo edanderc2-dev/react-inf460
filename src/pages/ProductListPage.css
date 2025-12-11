@@ -1,20 +1,20 @@
 /* ========================================
-   PRODUCTLISTPAGE.CSS - DISEÑO EXACTO
+   PRODUCTLISTPAGE.CSS - BASADO EN IMAGEN 2
    ======================================== */
 
 .product-list-page {
-    padding: 0 15px;
+    padding: 20px 15px;
     max-width: var(--max-width-desktop);
     margin: 0 auto;
 }
 
-/* Breadcrumb más prominente */
+/* Breadcrumb */
 .breadcrumb {
-    font-size: 0.9em;
+    font-size: 0.88em;
     margin-bottom: 20px;
     padding: 10px 0;
     border-bottom: 1px solid var(--border-color);
-    color: #555;
+    color: #666;
     font-weight: 400;
 }
 
@@ -34,19 +34,19 @@
     color: var(--text-color);
 }
 
-/* Layout con sidebar */
+/* Layout con sidebar - EXACTO A LA IMAGEN */
 .content-layout {
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 /* ========================================
-   SIDEBAR DE FILTROS (Izquierda)
+   SIDEBAR DE FILTROS (Izquierda) - IMAGEN 2
    ======================================== */
 .sidebar-filters {
-    width: 220px;
+    width: 230px;
     flex-shrink: 0;
-    background-color: white;
+    background-color: transparent;
     padding: 0;
     border-radius: 0;
     box-shadow: none;
@@ -55,23 +55,23 @@
 }
 
 .sidebar-filters h3 {
-    color: var(--color-primary);
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 10px;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
     margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.1em;
+    margin-bottom: 20px;
+    font-size: 1.15em;
     font-weight: bold;
 }
 
 .filter-block {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .filter-block h4 {
     font-size: 0.95em;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: var(--text-color);
     font-weight: 600;
 }
@@ -83,26 +83,28 @@
 }
 
 .sidebar-filters li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     cursor: pointer;
     color: #666;
     font-size: 0.88em;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, padding-left 0.3s ease;
     padding-left: 0;
 }
 
 .sidebar-filters li:hover {
     color: var(--color-primary);
+    padding-left: 5px;
 }
 
+/* Más vendidos - subsección */
 .most-sold-items {
-    padding-left: 12px;
-    margin-top: 8px;
+    padding-left: 15px;
+    margin-top: 10px;
     border-left: 2px solid var(--border-color);
 }
 
 .most-sold-items p {
-    margin: 6px 0;
+    margin: 8px 0;
     font-size: 0.82em;
     color: #888;
     cursor: pointer;
@@ -114,29 +116,29 @@
 }
 
 /* ========================================
-   ÁREA PRINCIPAL DE PRODUCTOS
+   ÁREA PRINCIPAL DE PRODUCTOS - IMAGEN 2
    ======================================== */
 .product-listing-main {
     flex-grow: 1;
 }
 
 .product-listing-main h2 {
-    color: var(--color-primary);
-    font-size: 1.8em;
+    color: var(--text-color);
+    font-size: 1.9em;
     margin-top: 0;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 /* ========================================
-   BARRA DE ORDENAMIENTO
+   BARRA DE ORDENAMIENTO - EXACTO A IMAGEN 2
    ======================================== */
 .sort-bar {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-    padding: 12px 15px;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 12px 18px;
     background-color: #f5f5f5;
     border-radius: 0;
     box-shadow: none;
@@ -147,17 +149,17 @@
 .sort-bar span {
     font-weight: 400;
     color: #666;
-    font-size: 0.9em;
+    font-size: 0.88em;
 }
 
 .sort-bar label {
     font-weight: 400;
     color: #666;
-    font-size: 0.9em;
+    font-size: 0.88em;
 }
 
 .sort-bar select {
-    padding: 6px 10px;
+    padding: 7px 12px;
     border: 1px solid #ccc;
     border-radius: 3px;
     background-color: white;
@@ -165,6 +167,7 @@
     font-size: 0.88em;
     cursor: pointer;
     transition: border-color 0.3s ease;
+    min-width: 120px;
 }
 
 .sort-bar select:focus {
@@ -173,7 +176,7 @@
 }
 
 .sort-bar button, .view-toggle-btn {
-    padding: 6px 14px;
+    padding: 7px 16px;
     border: 1px solid #ccc;
     border-radius: 3px;
     background-color: white;
@@ -191,21 +194,19 @@
 }
 
 /* ========================================
-   GRID DE PRODUCTOS
-   ======================================== */
-/* Reutiliza las clases de ProductCard.css y variables.css */
-
-/* ========================================
    RESPONSIVE - TABLETS
    ======================================== */
 @media (max-width: 1024px) {
     .sidebar-filters {
-        width: 220px;
-        padding: 18px;
+        width: 200px;
     }
 
     .content-layout {
-        gap: 20px;
+        gap: 25px;
+    }
+
+    .product-listing-main h2 {
+        font-size: 1.7em;
     }
 }
 
@@ -214,7 +215,7 @@
    ======================================== */
 @media (max-width: 768px) {
     .product-list-page {
-        padding: 0 10px;
+        padding: 15px 10px;
     }
 
     .breadcrumb {
@@ -225,12 +226,17 @@
 
     .content-layout {
         flex-direction: column;
+        gap: 25px;
     }
 
     .sidebar-filters {
         width: 100%;
         order: 2;
-        margin-top: 20px;
+        margin-top: 0;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
     }
 
     .product-listing-main {
@@ -239,17 +245,22 @@
 
     .product-listing-main h2 {
         font-size: 1.5em;
-        margin-bottom: 15px;
+        margin-bottom: 18px;
     }
 
     .sort-bar {
-        justify-content: space-between;
+        justify-content: flex-start;
         gap: 12px;
         padding: 12px 15px;
+        flex-wrap: wrap;
     }
 
     .sort-bar button, .view-toggle-btn {
         margin-left: 0;
+    }
+
+    .sort-bar select {
+        min-width: 100px;
     }
 }
 
@@ -262,11 +273,11 @@
     }
 
     .product-listing-main h2 {
-        font-size: 1.3em;
+        font-size: 1.35em;
     }
 
     .sidebar-filters {
-        padding: 15px;
+        padding: 18px 15px;
     }
 
     .sidebar-filters h3 {
@@ -276,7 +287,12 @@
     .sort-bar {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 12px;
+        padding: 12px 15px;
+    }
+
+    .sort-bar > * {
+        width: 100%;
     }
 
     .sort-bar span, .sort-bar label {
@@ -293,8 +309,7 @@
    TEMA OSCURO
    ======================================== */
 body.dark-theme .sidebar-filters {
-    background-color: var(--bg-header);
-    border-color: var(--border-color);
+    background-color: transparent;
 }
 
 body.dark-theme .sort-bar {
@@ -316,4 +331,11 @@ body.dark-theme .sidebar-filters li {
 
 body.dark-theme .sidebar-filters li:hover {
     color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    body.dark-theme .sidebar-filters {
+        background-color: var(--bg-header);
+        border-color: var(--border-color);
+    }
 }

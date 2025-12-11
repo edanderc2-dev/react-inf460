@@ -1,10 +1,4 @@
-/* src/App.css */
 
-/* -------------------------------------- */
-/* ESTILOS GLOBALES Y RESETS */
-/* -------------------------------------- */
-
-/* Definición de variables de color (basadas en PRO HOME) */
 :root {
     --primary-red: #cc0000; /* Rojo principal para precios y acentos */
     --secondary-red: #e66465; /* Rojo más claro para la barra de navegación */
